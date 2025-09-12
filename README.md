@@ -2,7 +2,7 @@
 
 ## 1. Data Collection & Preprocessing
 
-The dataset was collected from multiple sources to replicate the **persona of Inosuke (Kimetsu no Yaiba)** in a natural way.  
+The dataset was handwritten and collected from anime, manga to replicate the **persona of Inosuke (Kimetsu no Yaiba)** in a natural way.  
 All samples were normalized into the format:
 
 ```json
@@ -78,19 +78,20 @@ flowchart LR
 
 | Epoch | Training Loss | Eval Loss | Time per Epoch |
 |-------|---------------|-----------|----------------|
-| 1     | 4.04 → 1.56   | 1.56      | ~00:12:34      |
-| 2     | 1.56 → 1.47   | 1.47      | ~00:12:28      |
-| 3     | 1.47 → 1.42   | 1.42      | ~00:12:15      |
-| 4     | 1.42 → 1.40   | 1.40      | ~00:12:09      |
-| 5     | 1.40 → 1.39   | 1.39      | ~00:12:01      |
-| 6     | 1.39 → 1.38   | 1.38      | ~00:11:58      |
+| 1     | 4.04 → 1.59   | 1.56      | ~02:01:20      |
+| 2     | 1.59 → 1.45   | 1.46      | ~02:09:33      |
+| 3     | 1.45 → 1.38   | 1.42      | ~02:09:01      |
+| 4     | 1.38 → 1.31   | 1.40      | ~02:09:05      |
+| 5     | 1.31 → 1.24   | 1.38      | ~02:09:19      |
+| 6     | 1.24 → 1.24   | 1.39      | ~02:17:52      |
+
+The entire **fine-tuning process** took about **12 hours** in total
+The model started showing slight overfitting at epoch 6, so the **best checkpoint** was selected at **epoch 5**.
 
 **Loss Curve Visualization**
 
 ![Loss Curve](loss_curve.png)
 
-Both training and evaluation loss decrease steadily → good convergence, no major signs of overfitting.  
-EarlyStopping ensures unnecessary epochs are skipped if no improvement.  
-Logging integrated with TensorBoard (`tensorboard --logdir=./logs`).  
+Both training and evaluation loss decrease steadily → good convergence, no major signs of overfitting.   
 
 ---
