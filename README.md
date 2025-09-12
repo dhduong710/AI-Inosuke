@@ -1,4 +1,4 @@
-# Inosuke-AI Fine-tuning Project
+# AI-Inosuke Project
 
 ## 1. Data Collection & Preprocessing
 
@@ -36,7 +36,7 @@ pie title Dataset Composition
 
 ---
 
-## 2. Why Qwen2.5 Instruct + QLoRA 4-bit?
+## 2. Qwen2.5 Instruct + QLoRA 4-bit
 
 | Criterion | Explanation |
 |-----------|-------------|
@@ -62,28 +62,7 @@ flowchart LR
 - **Method**: QLoRA (4-bit quantization, LoRA adapters)  
 - **Hardware**: RTX 3060 6GB VRAM  
 - **Dataset size**: 9,259 samples  
-- **Training output**: `D:\AI-Inosuke\models\inosuke-lora\checkpoint-2605` (best checkpoint)  
-
-### Training Format
-
-During fine-tuning, prompts followed this template:
-
-```text
-if inp and inp.strip():
-    text = f"### Instruction:\n{instr}\n\n### Input:\n{inp}\n\n### Response:\n{out}"
-else:
-    text = f"### Instruction:\n{instr}\n\n### Response:\n{out}"
-```
-
-### Example (multi-turn conversation)
-
-```json
-{
-  "instruction": "A multi-turn dialogue about a crow.",
-  "input": "You: Do you often look at the sky to remember the crow?\nInosuke:",
-  "output": "Yes, whenever I see a bird shadow I look up! I think it’s back.\nYou: And when you realize it’s not?\nInosuke: I get mad and yell! Then sigh again."
-}
-```
+- **Run time**: 12 hours 
 
 ---
 
