@@ -86,6 +86,7 @@ flowchart LR
 | 6     | 1.24 → 1.24   | 1.39      | ~02:17:52      |
 
 The entire **fine-tuning process** took about **12 hours** in total.
+
 The model started showing slight overfitting at epoch 6, so the **best checkpoint** was selected at **epoch 5**.
 
 **Loss Curve Visualization**
