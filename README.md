@@ -49,7 +49,7 @@ pie title Dataset Composition
 
 ```mermaid
 flowchart LR
-    A[Base Model Qwen2.5-3B Instruct] --> B[Quantization (4-bit NF4)]
+    A[Base Model: Qwen2.5-3B Instruct] --> B[Quantization: 4-bit NF4]
     B --> C[LoRA Fine-tuning Layers]
     C --> D[Inosuke Persona Fine-tuned Model]
 ```
