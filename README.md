@@ -87,14 +87,7 @@ flowchart LR
 
 **Loss Curve Visualization**
 
-```mermaid
-line
-  title Training vs Eval Loss
-  x-axis [1, 2, 3, 4, 5, 6]
-  y-axis "Loss"
-  series "Training Loss" [4.04, 1.56, 1.47, 1.42, 1.40, 1.39]
-  series "Eval Loss" [1.56, 1.47, 1.42, 1.40, 1.39, 1.38]
-```
+![Loss Curve](loss_curve.png)
 
 Both training and evaluation loss decrease steadily → good convergence, no major signs of overfitting.  
 EarlyStopping ensures unnecessary epochs are skipped if no improvement.  
